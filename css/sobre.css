@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---new--- */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+#menu-wrapper {
+    background-image: none;
+    background-color: #1f1a30;
+    height: 15vh;
+}
+
+.sobre-wrapper {
+    margin: 40px auto;
+    width: 80vw;
+}
+
+.sobre-wrapper h1 {
+    font-size: 1.9rem;
+    margin: 20px 20px 30px 0;
+}
+
+.sobre-wrapper p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.sobre-wrapper ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin: 15px 10px 5px 10px;
+    padding: 10px;
+}
+
+.sobre-wrapper ul li {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sobre-wrapper strong { 
+    font-weight: bold; 
+}
+
+@media(min-width: 1366px) {
+    #menu-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .sobre-wrapper {
+        margin: 40px auto;
+        width: 1100px;
+        height: 600px;
+    }
+
+    .sobre-wrapper h1 {
+        font-size: 3rem;
+        margin: 20px 20px 30px 0;
+    }
+
+    .sobre-wrapper p {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .sobre-wrapper ul li {
+        font-size: 1.9rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .sobre-wrapper ul {
+        list-style-type: circle;
+        list-style-position: outside;
+        margin: 15px 70px 15px 50px;
+        padding: 10px;
+    }
+    
+    .sobre-wrapper ul li {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+}

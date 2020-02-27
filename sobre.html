@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sobre</title>
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <link rel="stylesheet" type="text/css" href="css/sobre.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="scripts/modal.js"></script>
+        <script src="scripts/index.js"></script>
+    </head>
+    <body>
+        <header id="menu-wrapper">
+            <div class="phoneMenuContainer">
+                <div class="logo"> 
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="logo">
+                    </a>
+                </div>
+                <div class="phoneBar">
+                    <div class="phoneLogin">
+                        <img src="img/user.svg" alt="conta">
+                    </div>
+                    <div class="phoneMenu">
+                        <img src="img/menu.svg" alt="menu">
+                    </div>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="publicaranuncio.html">Publicar Anúncio</a></li>
+                    <li><a href="desaparecidos.html">Desaparecidos</a></li>
+                    <li><a href="sobre.html">Encontrados</a></li>
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                        <ul>
+                            <li><a href="sobre.html">Contato</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="sobre.html">Blog</a>
+                        <ul>
+                            <li><a href="sobre.html">Noticias</a></li>
+                            <li><a href="sobre.html">Eventos</a></li>
+                            <li><a href="sobre.html">Recomendações</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="login">
+                <ul>
+                    <li class="logIn">Iniciar Sessão</li>
+                    <li class="createAccount">Criar Conta</li>
+                </ul>
+            </div>
+            <div class="modal-login">
+                <form id="Form" method="get" action="sobre.html">
+                    <div>
+                        <label>
+                            Nome de Utilizador
+                            <input type="text" name="username" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Senha
+                            <input type="password" name="password" required>
+                        </label>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" name="login-button" class="loginButton">Iniciar Sessão</button>
+                        <button type="button" name="cancel-button" class="cancelButtonL">Cancelar</button>
+                    </div>
+                    <div class="span-container">
+                        <span>Ainda não tem conta? <span class="new-account">Criar uma conta de utilizador.</span></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-new-account">
+                <form id="Form-new-account" method="get" action="sobre.html">
+                    <div>
+                        <label>
+                            Nome
+                            <input type="text" name="name" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            E-mail
+                            <input type="email" name="email" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Criar uma Senha
+                            <input type="password" name="password" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Confirme sua Senha
+                            <input type="password" name="passwordc" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Data de Nascimento
+                            <input type="date" name="date">
+                        </label>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="createButton">Criar Conta</button>
+                        <button type="button" class="cancelButtonN">Cancelar</button>
+                    </div>
+                    <div class="span-container">
+                        <span>Já está inscrito? <span class="log-in">Clique aqui para iniciar sessão.</span></span>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main>
+            <div class="sobre-wrapper">
+                <article>
+                    <h1>Sobre</h1>
+                    <p>O Encontra-me.org é disponibilizado à comunidade de forma completamente gratuita desde 1 de Fevereiro de 2005. Trata-se do mais poderoso recurso para ajudar a encontrar animais desaparecidos em Portugal e inclui:</p>
+                    <ul>
+                        <li>Uma base de dados de animais desaparecidos e encontrados rigorosíssima e actualizada com registo das características do animal desaparecido ou encontrado. A informação de todos os anúncios é minuciosamente revista e corrigida antes de os anúncios serem activados, o que confere a este recurso um rigor e uma eficácia sem par.</li>
+                        <li>Um sistema de notificações de animais desaparecidos e encontrados com base no local.</li>
+                        <li>Divulgação online de anúncios de animais desaparecidos e de animais encontrados com disponibilização automática de folhetos de divulgação em PDF optimizados para maior impacto.</li>
+                        <li>Disponibilização de sugestões abrangentes sobre as medidas a tomar quando um animal desaparece ou quando se encontra um animal, bem como recomendações para evitar desaparecimentos.</li>
+                    </ul>
+                    <p>Se o registo de informação sobre animais desaparecidos for feito <strong>num único local centralizado</strong>, bem organizado e facilmente pesquisável, <strong>a consulta de informações e o cruzamento de dados são uma tarefa muito mais rápida e eficaz</strong>, permitindo identificar mais facilmente um animal e contribuir para que regresse mais rapidamente a casa.</p>
+                </article>
+            </div>
+            <form id="newsletterForm" method="get" action="index.html"> 
+                <div class="newsletter">
+                    <h2>NewsLetter</h2>
+                    <div>
+                        <label>
+                            <input type="email" name="email" placeholder="E-mail">
+                        </label>
+                    </div>
+                    <div>
+                        <button type="button" name="button">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <footer>
+                <div class="footer">
+                        <ul>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="sobre.html">Declaração de Privacidade</a></li>
+                            <li><a href="sobre.html">Termos de Serviço</a></li>
+                        </ul>
+                        <p>©2019 Encontra-me® – Todos os Direitos Reservados</p>
+                        <div class="social">  
+                            <ul>
+                                <li><a href="sobre.html"><img src="img/facebook-logo.svg" alt="facebook"></a></li>
+                                <li><a href="sobre.html"><img src="img/instagram.svg" alt="instagram"></a></li>
+                                <li><a href="sobre.html"><img src="img/twitter-logo.svg" alt="twitter"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </footer>
+    </body>
+</html>

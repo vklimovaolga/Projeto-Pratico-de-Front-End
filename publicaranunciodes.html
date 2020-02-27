@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Publicar Anúncio - Animal Desaparecido</title>
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link rel="stylesheet" type="text/css" href="css/publicaranunciodes.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="scripts/modal.js"></script>
+        <script src="scripts/index.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="menu-wrapper">
+                <div class="phoneMenuContainer">
+                    <div class="logo"> 
+                        <a href="index.html">
+                            <img src="img/logo2.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="phoneBar">
+                        <div class="phoneLogin">
+                            <img src="img/user.svg" alt="conta">
+                        </div>
+                        <div class="phoneMenu">
+                            <img src="img/menu.svg" alt="menu">
+                        </div>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="publicaranuncio.html">Publicar Anúncio</a></li>
+                        <li><a href="desaparecidos.html">Desaparecidos</a></li>
+                        <li><a href="publicaranunciodes.html">Encontrados</a></li>
+                        <li>
+                            <a href="sobre.html">Sobre</a>
+                            <ul>
+                                <li><a href="publicaranunciodes.html">Contato</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="publicaranunciodes.html">Blog</a>
+                            <ul>
+                                <li><a href="publicaranunciodes.html">Noticias</a></li>
+                                <li><a href="publicaranunciodes.html">Eventos</a></li>
+                                <li><a href="publicaranunciodes.html">Recomendações</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="login">
+                    <ul>
+                        <li class="logIn">Iniciar Sessão</li>
+                        <li class="createAccount">Criar Conta</li>
+                    </ul>
+                </div>
+                <div class="modal-login">
+                    <form id="Form" method="get" action="publicaranunciodes.html">
+                        <div>
+                            <label>
+                                Nome de Utilizador
+                                <input type="text" name="username" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Senha
+                                <input type="password" name="password" required>
+                            </label>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" class="loginButton">Iniciar Sessão</button>
+                            <button type="button"  class="cancelButtonL">Cancelar</button>
+                        </div>
+                        <div class="span-container">
+                            <span>Ainda não tem conta? <span class="new-account">Criar uma conta de utilizador.</span></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-new-account">
+                    <form id="Form-new-account" method="get" action="publicaranunciodes.html">
+                        <div>
+                            <label>
+                                Nome
+                                <input type="text" name="name" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                E-mail
+                                <input type="email" name="email" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Criar uma Senha
+                                <input type="password" name="password" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Confirme sua Senha
+                                <input type="password" name="passwordc" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Data de Nascimento
+                                <input type="date" name="date">
+                            </label>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" class="createButton">Criar Conta</button>
+                            <button type="button" class="cancelButtonN">Cancelar</button>
+                        </div>
+                        <div class="span-container">
+                            <span>Já está inscrito? <span class="log-in">Clique aqui para iniciar sessão.</span></span>
+                        </div>
+                    </form>
+                </div>
+            </header>
+            <main class="main-container">
+                <h1>Publicar Anúncio</h1>
+                <div class="required-info">Os campos assinalados com asterisco (*) são de preenchimento obrigatório.</div>
+                <form>
+                    <div class="data-local">
+                        <h2>Data e Local em que o Animal Desapareceu</h2>
+                        <div class="data-local-sub">
+                            <div>
+                                <label>
+                                    Data
+                                    <input type="date" name="date">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Horas
+                                    <input type="time" name="time">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Distrito/Região
+                                    <select id="distrito" >
+                                        <option value="0">Seleccione</option>
+                                        <option value="1">Açores</option>
+                                        <option value="2">Aveiro</option>
+                                        <option value="3">Beja</option>
+                                        <option value="4">Braga</option>
+                                        <option value="5">Bragança</option>
+                                        <option value="6">Castelo Branco</option>
+                                        <option value="7">Coimbra</option>
+                                        <option value="8">Évora</option>
+                                        <option value="9">Faro</option>
+                                        <option value="10">Guarda</option>
+                                        <option value="11">Leiria</option>
+                                        <option value="12">Lisboa</option>
+                                        <option value="13">Madeira</option>
+                                        <option value="14">Portalegre</option>
+                                        <option value="15">Porto</option>
+                                        <option value="16">Santarém</option>
+                                        <option value="17">Setúbal</option>
+                                        <option value="18">Viana do Castelo</option>
+                                        <option value="19">Vila Real</option>
+                                        <option value="20">Viseu</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Concelho
+                                    <input type="text" name="concelho" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Localidade
+                                    <input type="text" name="localidade" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Rua
+                                    <input type="text" name="rua" required>
+                                </label>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="animal-photo">
+                        <h2>Fotografias do Animal</h2>
+                        <div class="animal-photo-sub">
+                            <div class="alert-text">As fotografias devem ser de corpo inteiro, sem texto/desenhos e o mais actuais possível.</div>
+                            <div>
+                                <label>
+                                    1.ª Fotografia
+                                    <input type="file" name="file" accept=".jpg,.png,image/*">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    2.ª Fotografia
+                                    <input type="file" name="file" accept=".jpg,.png,image/*">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    3.ª Fotografia
+                                    <input type="file" name="file" accept=".jpg,.png,image/*">
+                                </label>
+                            </div>
+                            <div class="alert-text">Se a fotografia não for do próprio animal, assinale a caixa abaixo.</div>
+                            <div class="checkbox-container">
+                                <label>
+                                    <input type="checkbox" name="animal-semelhante">
+                                    Fotografia de Animal Semelhante
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animal-features">
+                        <h2>Características do Animal</h2>
+                        <div class="animal-features-sub">
+                            <div>
+                                <label>
+                                    Espécie
+                                    <select>
+                                        <option>Seleccione</option>
+                                        <option>Cão</option>
+                                        <option>Gato</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="breed-container">
+                                <div>
+                                    <label>Raça
+                                        <select>
+                                            <option value="0">Seleccione</option>
+                                            <option value="1">Sem Raça Definida</option>
+                                            <option value="2">Outra Raça</option>
+                                            <optgroup label="Raças de Cão">
+                                                <option value="Airedale Terrier">Airedale Terrier</option>
+                                                <option value="Akita Inu">Akita Inu</option>
+                                                <option value="Basset Hound">Basset Hound</option>
+                                                <option value="Border Collie">Border Collie</option>
+                                                <option value="Dogue Argentino">Dogue Argentino</option>
+                                                <option value="Fox Terrier">Fox Terrier</option>
+                                            </optgroup>
+                                            <optgroup label="Raça de Gato">
+                                                <option value="Abissínio">Abissínio</option>
+                                                <option value="Angorá Turco">Angorá Turco</option>
+                                                <option value="Azul Russo">Azul Russo</option>
+                                                <option value="Bengal">Bengal</option>
+                                                <option value="Birmanês">Birmanês</option>
+                                                <option value="Britânico de Pêlo Curto">Britânico de Pêlo Curto</option>
+                                                <option value="Bosques da Noruega">Bosques da Noruega</option>
+                                                <option value="Chartreux">Chartreux</option>
+                                                <option value="Maine Coon">Maine Coon</option>
+                                                <option value="Persa">Persa</option>
+                                                <option value="Ragdoll">Ragdoll</option>
+                                                <option value="Sagrado da Birmânia">Sagrado da Birmânia</option>
+                                                <option value="Scottish Fold">Scottish Fold</option>
+                                                <option value="Siamês">Siamês</option>
+                                            </optgroup>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label>
+                                    Especificar Raça
+                                    <input type="text" name="other-animal">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Nome do Animal
+                                    <input type="text" name="animal-name">
+                                </label>
+                            </div>
+                            <div>
+                                <label>Idade
+                                    <select name="age">
+                                        <option value="0">Seleccione</option>
+                                        <option value="1">Bebé</option>
+                                        <option value="2">Jovem</option>
+                                        <option value="3">Adulto</option>
+                                        <option value="4">Sénior</option>
+                                    </select>
+                                </labe>
+                            </div>
+                            <div class="gender-container">
+                                <label>Sexo</label>
+                                <div class="gender-container-sub">
+                                    <label>
+                                        <input type="radio" value="1" name="gender" required checked>
+                                        Macho
+                                    </label>
+                                    <label>
+                                        <input type="radio" value="2" name="gender" required>
+                                        Fêmea
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="color-container">
+                                <div class="color-container-sub">
+                                <label>1.ª Cor</label>
+                                    <div class="groupColor">
+                                        <div class="colorPicker" style="background:#000" title="Preto"></div>
+                                        <div class="colorPicker"  style="background: #FFF" title="Branco"></div>
+                                        <div class="colorPicker"  style="background: #663300" title="Castanho"></div>
+                                        <div class="colorPicker"  style="background: #969696" title="Cinzento"></div>
+                                        <div class="colorPicker"  style="background: #F08F00" title="Laranja"></div>
+                                        <div class="colorPicker"  style="background: #48D130" title="Verde"></div>
+                                    </div>
+                                </div>
+                                <div class="color-container-sub">
+                                    <label>2.ª Cor</label>
+                                    <div class="groupColor">
+                                        <div class="colorPicker" style="background:#000" title="Preto"></div>
+                                        <div class="colorPicker"  style="background: #FFF" title="Branco"></div>
+                                        <div class="colorPicker"  style="background: #663300" title="Castanho"></div>
+                                        <div class="colorPicker"  style="background: #969696" title="Cinzento"></div>
+                                        <div class="colorPicker"  style="background: #F08F00" title="Laranja"></div>
+                                        <div class="colorPicker"  style="background: #48D130" title="Verde"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="microchip-container">
+                                <label>Tem Microchip?</label>
+                                <div class="microchip-container-sub"> 
+                                    <label>
+                                        <input type="radio" value="1" name="chip" checked>
+                                        Não
+                                    </label>
+                                    <label><input type="radio" value="2" name="chip">
+                                        Sim
+                                    </label>
+                                    <label><input type="radio" value="0" name="chip">
+                                        Não Sei Se Tem Chip
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mcnumber-container">
+                                <label>N.º de Microchip</label>
+                                <div class="mcnumber-container-sub">
+                                    <input type="text" name="microchip-number" placeholder="opcional">
+                                    <div class="mcnumber-info">É importante indicar o n.º para permitir a identificação directa por microchip na base de dados. Por motivos de segurança, não é tornado público.</div>
+                                </div>
+                            </div>
+                            <div class="description-container">
+                                <label>Descrição do Animal</label>
+                                <div class="description-container-sub">
+                                    <textarea maxlength="255" name="animal-description" ></textarea>
+                                    <div class="description-info"> Descreva o animal com o maior detalhe possível, indicando a distribuição das cores pelo corpo e o tipo de cauda, orelhas e focinho.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coments">
+                        <h2>Comentários</h2>
+                        <div class="coments-sub">
+                            <div class="coments-container">
+                                <label>Circunstâncias do Desaparecimento</label>
+                                <div class="coments-container-sub">
+                                    <textarea minlength="15" maxlength="500" name="initial-circumstances"></textarea>
+                                    <div class="coments-info">Detalhe as circunstâncias de desaparecimento: costuma passear sozinho e não regressou, fugiu por uma porta aberta e não está habituado a andar na rua, caiu da janela (indique o andar!). Não escreva apenas que fugiu ou que fugiu/desapareceu de casa!</div>
+                                </div>
+                            </div>
+                            <div class="more-info">
+                                <label>Informações Adicionais</label>
+                                <div class="more-info-sub">
+                                    <textarea minlength="15" maxlength="500" name="initial-comment"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts">
+                        <h2>Contactos do Anúncio</h2>
+                        <div class="contacts-sub">
+                            <div class="alert-text">Apenas utilizadores registados podem consultar os contactos e de forma limitada.</div>
+                            <div>
+                                <label>
+                                    1.º Telefone
+                                    <input type="number" name="phone">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    2.º Telefone
+                                    <input type="number" name="phone">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    E-mail
+                                    <input type="email" name="email">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <button type="button" class="save-button">Guardar</button>
+                        <button type="button"  class="cancel-button">Cancelar</button>
+                    </div>
+                </form>
+            </main>
+            <footer>
+                <div class="footer">
+                    <ul>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="publicaranunciodes.html">Declaração de Privacidade</a></li>
+                        <li><a href="publicaranunciodes.html">Termos de Serviço</a></li>
+                    </ul>
+                    <p>©2019 Encontra-me® – Todos os Direitos Reservados</p>
+                    <div class="social">  
+                        <ul>
+                            <li><a href="publicaranunciodes.html"><img src="img/facebook-logo.svg" alt="facebook"></a></li>
+                            <li><a href="publicaranunciodes.html"><img src="img/instagram.svg" alt="instagram"></a></li>
+                            <li><a href="publicaranunciodes.html"><img src="img/twitter-logo.svg" alt="twitter"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>    

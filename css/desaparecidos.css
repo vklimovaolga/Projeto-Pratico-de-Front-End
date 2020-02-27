@@ -1,0 +1,235 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* new */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+#menu-wrapper {
+    background-image: none;
+    background-color: #1f1a30;
+    height: 15vh;
+}
+
+#des-main {
+    margin: 40px auto;
+    width: 90vw;
+    /* height: 60vh; */
+}
+
+#des-main h1 {
+    font-size: 2rem;
+    margin: 20px 20px 30px 0;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-wrapper {
+    width: 200px;
+    margin: 10px 40px 10px 10px;
+}
+
+.form-wrapper label {
+    display: inline-block;
+    font-size: 1.9rem;
+    margin: 10px 10px 10px 0;
+    text-align: left;
+}
+
+.form-wrapper select {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+}
+
+.form-wrapper select:hover {
+    border: 1px solid #4219c7;
+}
+
+.groupColor {
+    margin-top: 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+.colorPicker {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    border-radius: 5px 10px 5px;
+} 
+
+.colorPicker:hover  {
+    border: 1px solid #4219c7;
+}
+
+.form-wrapper p {
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+.form-wrapper p a {
+    text-decoration: none;
+    color: #4219c7;
+}
+
+.pic-wrapper {
+    margin: 15px 30px;
+}
+
+.pic-wrapper ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.pic-wrapper ul li a img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.pic-wrapper  img:hover {
+    box-shadow: 3px 3px 5px #5b566d69;
+}
+
+.date {
+    font-size: 1.3rem;
+    padding: 4px;
+    width: 90px;
+    color: #FFF;
+    text-align: center;
+    background-color: #23202ec5;
+    border-radius: 5px 0px 0px 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+}
+
+.location {
+    font-size: 1.4rem;
+    padding: 4px;
+    color: #FFF;
+    width: 60px;
+    height: 15px;
+    text-align: center;
+    background-color: #23202ec5;
+    border-radius: 0px 5px 5px 0px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.pic-wrapper ul li.hide {
+    display: none;
+}
+
+.pic-wrapper ul li.show {
+    display: block;
+}
+
+@media(min-width: 768px) {
+    
+
+    .main-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #des-main h1 {
+        font-size: 3rem;
+        margin: 20px 20px 30px 0;
+    }
+
+    #des-main {
+        width: 90vw;  
+    }
+    .pic-wrapper {
+
+        margin: 5px;
+    }
+
+    .pic-wrapper ul li a img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media(min-width: 1366px) {
+    #menu-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    #des-main {
+        width: 70vw;  
+        height: 800px;
+    }
+
+    .pic-wrapper ul li a img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,772 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --new-- */
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-image: url("../img/banner2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; 
+    position: relative;
+}
+
+.phoneMenuContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    margin: 20px 0px 10px 15px;
+    width: 30vw;
+}
+
+.phoneBar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 25px 10px 0px; 
+}
+
+.phoneLogin {
+    margin-right: 5vw;
+}
+
+.phoneLogin img {
+    width: 7vw;
+}
+
+.phoneMenu img {
+    width: 7vw;
+}
+
+/* ---menu for phone-- */
+
+.menu ul li {
+    display: none;
+}
+
+.phoneMenu {
+    position: relative;
+}
+
+.show ul {
+    position: absolute;
+    top: 55px;
+    left: 250px;
+    z-index: 2;
+    font-size: 1.3rem;
+}
+
+.show ul li {
+    padding: 10px 10px 10px 10px;
+    display: block;
+    text-transform: uppercase;
+    text-align: end;
+    border:  1px solid rgba(128, 128, 128, 0.267);
+    background-color: #373042;
+}
+
+.show ul > li ul {
+    display: none;
+    position: absolute;
+    top: 140px;
+    left: -152px;
+}
+
+.show ul > li:hover ul, .show ul > li:active ul  {
+    display: block;     
+}
+
+.show ul li ul li {
+    width: 130px;
+}
+
+.show ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* ---login for phone--- */
+
+.login ul li {
+    display: none;
+}
+
+.phoneLogin {
+    position: relative;
+}
+
+.show-login ul {
+    position: absolute;
+    top: 55px;
+    left: 210px;
+    z-index: 2;
+    font-size: 1.3rem;
+}
+
+.show-login ul li {
+    padding: 10px 10px 10px 10px;
+    display: block;
+    text-transform: uppercase;
+    text-align: end;
+    border:  1px solid rgba(128, 128, 128, 0.267);
+    background-color: #373042;
+    color: #FFF;
+    width: 110px;
+}
+
+.publish {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;  
+    color: #FFF;
+    width: 85vw;
+    position: absolute;
+    top: 30vh;
+    left: 6vw;
+    z-index: 1;
+}
+
+.publish p {
+    background-color: rgba(90, 90, 90, 0.5);
+    padding: 15px;
+}
+
+.publish ul {
+    margin-top: 40px;
+}
+
+.publish ul li {
+    background-color: white;
+    padding: 15px;
+    width: 250px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.publish ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*               Main                */
+
+.main {
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.containerLost, .containerFound {
+    background-color: #f9f9ff;
+    padding-top: 25px;
+}
+
+.containerLost ul li img, .containerFound ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.containerLost ul, .containerFound ul {
+    margin: 0 25px 25px 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+.containerLost ul li, .containerFound ul li {
+    width: 85vw;
+    height: 50vh;
+    margin-right: 25px;
+    flex: 0 0 auto;
+    background-color: gray;
+}
+
+.moreButton {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.moreButton a {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #FFF;
+}
+
+.newsletter {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/cat2.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.newsletter h2 {
+    background-color: #698f79c4;
+    font-size: 2.5rem;
+    padding: 20px;
+    text-shadow: 2px 2px 1px rgb(255, 255, 255);
+}
+
+.newsletter input[type="email"] {
+    margin: 20px;
+    padding: 9px;
+    width: 200px;
+}
+
+.newsletter button {
+    background-color: #FFF;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 80px;
+    border: none;
+}
+
+/*              Footer              */
+
+.footer {
+    font-family: "Poppins", sans-serif;
+    background-color: #23202e;
+}
+
+.footer ul {
+    height: 5vh;
+    text-align: center;
+    padding: 20px;  
+}
+
+.footer ul li {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.footer p {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;  
+    color: #FFF;
+}
+
+.social ul {
+    text-align: center;
+    padding: 0px;   
+}
+
+.social ul li {
+    margin-right: 15px;
+}
+
+.social ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.social ul li a img {
+    width: 15px;
+}
+
+/*            Tablet            */
+
+@media(min-width:  768px) {
+    .phoneBar {
+        margin: 40px 50px 10px 0;
+    }
+
+    .publish p {
+        width: 70vw;
+        font-size: 2rem;
+        margin-bottom: 90px;
+    }
+
+    .publish ul li {
+        width: 55vw;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .publish a {
+        font-size: 2rem;
+    }
+
+    .main h2 {
+        font-size: 2.5rem;
+        padding: 25px;
+    }
+
+    .containerLost ul li, .containerFound ul li {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .moreButton a { 
+        font-size: 1.9rem;
+        padding: 20px;
+    }
+
+    .newsletter h2 {
+        font-size: 3rem;
+        margin: 25px;
+    }
+
+    .newsletter input[type="email"] {
+        width: 250px;
+        padding: 15px;
+        margin: 30px;
+    }
+
+    .newsletter button {
+        font-size: 1.8rem;
+        width: 100px;
+    }
+
+    .footer ul li {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1.3rem;
+    }
+
+    .social ul li a img {
+        width: 15px;
+    }
+
+    .show ul {
+        position: absolute;
+        top: 105px;
+        left: 560px;
+        z-index: 2;
+        font-size: 1.5rem;
+    }
+
+    .show ul > li ul {
+        display: none;
+        position: absolute;
+        top: 140px;
+        left: -152px;
+    }
+
+    .show-login ul {
+        position: absolute;
+        top: 105px;
+        left: 470px;
+        font-size: 1.5rem;
+    }
+    
+    .show-login ul li {
+        width: 140px;
+    }
+}
+@media(min-width: 1024px) {
+    .publish p {
+        width: 75vw;
+        font-size: 2.9rem;
+        margin-bottom: 120px;
+    }
+
+    .publish ul li {
+        width: 60vw;
+        padding: 25px;
+        margin-bottom: 70px;
+    }
+
+    .publish ul li a {
+        font-size: 2.8rem;
+    }
+
+    .main h2 {
+        font-size: 3.5rem;
+        padding: 35px;
+    }
+
+    .moreButton a {
+        font-size: 2rem;
+    }
+
+    .newsletter h2 {
+        font-size: 3.5rem;
+    }
+
+    .newsletter input[type="email"] {
+        font-size: 1.5rem;
+        width: 300px;
+        padding: 10px;
+    }
+
+    .newsletter button {
+        width: 100px;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .footer ul li {
+        font-size: 1.6rem;
+    }
+
+    .footer p {
+        font-size: 1.5rem;
+    }
+
+    .show ul {
+        position: absolute;
+        top: 130px;
+        left: 780px;
+        z-index: 2;
+        font-size: 1.9rem;
+    }
+
+    .show ul > li ul {
+        display: none;
+        position: absolute;
+        top: 180px;
+        left: -216px;
+    }
+
+    .show ul li {
+        padding: 12px 12px 12px 12px;
+        width: 190px;
+    }
+
+    .show ul li ul li {
+        width: 190px;
+    }
+
+    .show-login ul {
+        position: absolute;
+        top: 130px;
+        left: 670px;
+        font-size: 1.9rem;
+    }
+    
+    .show-login ul li {
+        padding: 12px 12px 12px 12px;
+        width: 170px;
+    }
+}
+/*              WebSite            */
+@media(min-width: 1366px) {
+    #wrapper {
+        width: 100vw;
+        margin: 0 auto;
+        font-family: "Poppins", sans-serif;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        background-image: url("../img/banner2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    }
+
+    .phoneMenuContainer {
+        height: 20vh;
+        flex: 1;
+    }
+
+    .logo {
+        margin: 20px 30px 0 70px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .phoneBar {
+        display: none;
+    }
+    
+    .menu {
+        flex: 2;
+        flex-wrap: wrap;
+        text-align: center;
+        height: 5vh;
+        margin: 60px auto;
+        font-size: 1.3rem;
+    }
+
+    .menu ul  > li {
+        padding: 10px 10px 10px 10px;
+        display: inline-block;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    .menu  ul  > li ul {
+        position: absolute;
+        top: 32px;
+        left: 0px;
+        display: none;
+    }
+
+    .menu > ul > li:hover {
+        padding: 10px 10px 10px 10px;
+
+    }
+    
+    .menu ul li ul li {
+        text-align: left;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .menu  ul li:hover  ul {
+        border: 1px solid rgba(128, 128, 128, 0.267);
+        display: block;
+    }
+
+    .menu  ul li ul  li  a {
+        text-transform: none;
+        color: #333;
+        width: 130px;
+        display: block;
+        padding: 15px 15px 15px 20px;
+        background-color: #FFF;
+    }
+
+    .menu > ul li ul a:hover {
+        background-color: #373042;
+        color: #FFF;
+    }
+
+    .login {
+        height: 5vh;
+        margin: 60px 70px 0 0;
+        flex: 1;
+        text-align: center;
+        color: #FFF;
+    }
+
+    .login ul li {
+        display: inline-block;
+        padding: 10px;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+
+    .publish {
+        position: absolute;
+        width: 50vw;
+        top: 300px;
+        left: 200px;
+    }
+
+    .publish p {
+        font-size: 2rem;
+        width: 40vw;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 35px;
+    }
+
+    .publish ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .publish ul li {
+        width: 28vw;
+        background-color: white;
+        padding: 20px 5px 20px 5px;
+        margin-bottom: 40px;
+        text-transform: uppercase; 
+        text-align: center;
+    }
+
+    .publish ul li a {
+        font-size: 1.8rem;   
+        text-decoration: none;
+        color: black;
+    }
+
+    /*          Main             */
+
+    .main {
+        margin: 0 auto;
+    }
+
+    .main h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .containerLost, .containerFound {
+        background-color: #f9f9ff;
+        width: 1200px;
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    .containerFound {
+        margin-bottom: 100px;
+    }
+
+    .containerLost ul, .containerFound ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .containerLost ul li, .containerFound ul li {
+        width: 250px;
+        height: 250px;
+        margin: 15px;
+    }
+
+    .moreButton { 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;         
+    }
+
+    .moreButton a {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .newsletter {
+        background-image: url("../img/cat2.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .newsletter h2 {
+        font-size: 4.5rem;
+    }
+
+    .newsletter input[type="email"] {
+        font-size: 1.9rem;
+        padding: 12px;
+        width: 350px;
+    }
+
+    .newsletter button {
+        width: 100px;
+        padding: 10px;
+        margin: 20px;   
+        font-size: 1.9rem;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+        padding-bottom: 5px;
+    }
+
+    .footer ul {
+        padding: 10px;
+    }
+
+    .footer > ul li {
+        display: inline;
+        font-size:  1.8rem;
+        font-weight: bold;
+        margin-right: 50px;
+    }
+
+    .footer p {
+        font-size: 1.5rem;
+    }
+
+    .social ul li {
+        display: inline;
+    }
+
+    .social ul li a img {
+        width: 15px;
+    }
+}

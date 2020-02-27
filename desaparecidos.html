@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Desaparecidos</title>
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link rel="stylesheet" type="text/css" href="css/desaparecidos.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="scripts/modal.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/desaparecidos.js"></script>
+    </head>
+    <body>
+        <header id="menu-wrapper">
+            <div class="phoneMenuContainer">
+                <div class="logo"> 
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="logo">
+                    </a>
+                </div>
+                <div class="phoneBar">
+                    <div class="phoneLogin">
+                        <img src="img/user.svg" alt="conta">
+                    </div>
+                    <div class="phoneMenu">
+                        <img src="img/menu.svg" alt="menu">
+                    </div>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="publicaranuncio.html">Publicar Anúncio</a></li>
+                    <li><a href="desaparecidos.html">Desaparecidos</a></li>
+                    <li><a href="desaparecidos.html">Encontrados</a></li>
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                        <ul>
+                            <li><a href="desaparecidos.html">Contato</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="desaparecidos.html">Blog</a>
+                        <ul>
+                            <li><a href="desaparecidos.html">Noticias</a></li>
+                            <li><a href="desaparecidos.html">Eventos</a></li>
+                            <li><a href="desaparecidos.html">Recomendações</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="login">
+                <ul>
+                    <li class="logIn">Iniciar Sessão</li>
+                    <li class="createAccount">Criar Conta</li>
+                </ul>
+            </div>
+            <div class="modal-login">
+                <form id="Form" method="get" action="desaparecidos.html">
+                    <div>
+                        <label>
+                            Nome de Utilizador
+                            <input type="text" name="username" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Senha
+                            <input type="password" name="password" required>
+                        </label>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="loginButton">Iniciar Sessão</button>
+                        <button type="button" class="cancelButtonL">Cancelar</button>
+                    </div>
+                    <div class="span-container">
+                        <span>Ainda não tem conta? <span class="new-account">Criar uma conta de utilizador.</span></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-new-account">
+                <form id="Form-new-account" method="get" action="desaparecidos.html">
+                    <div>
+                        <label>
+                            Nome
+                            <input type="text" name="name" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            E-mail
+                            <input type="email" name="email" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Criar uma Senha
+                            <input type="password" name="password" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Confirme sua Senha
+                            <input type="password" name="passwordc" required> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Data de Nascimento
+                            <input type="date" name="date">
+                        </label>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="createButton">Criar Conta</button>
+                        <button type="button" class="cancelButtonN">Cancelar</button>
+                    </div>
+                    <div class="span-container">
+                        <span>Já está inscrito? <span class="log-in">Clique aqui para iniciar sessão.</span></span>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main id="des-main">
+            <h1>Anúncios de Animais Desaparecidos</h1>
+            <div class="main-wrapper">
+                <div class="form-wrapper">
+                    <form method="get" action="desaparecidos.html" id="form-select">
+                        <div>
+                            <label>Localização</label>
+                            <div>
+                                <select id="region" name="region">
+                                    <option value="">Qualquer Distrito/Região</option>
+                                    <option value="1">Lisboa</option>
+                                    <option value="2">Porto</option>
+                                    <option value="3">Setúbal</option>
+                                </select>  
+                            </div>
+                        </div>
+                        <div>
+                            <label>Características do Animal</label>
+                            <div>
+                                <select id="animal" name="animal">
+                                    <option value="">Qualquer Espécie</option>
+                                    <option value="1">Cão</option>
+                                    <option value="2">Gato</option>
+                                    <option value="3">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select id="gender" name="gender">
+                                    <option value="0">Qualquer Sexo</option>
+                                    <option value="1">Macho</option>
+                                    <option value="2">Fêmea</option>
+                                </select>
+                            </div>
+                            <!-- <div>
+                                <select id="breed" class="hide">
+                                    <option value="">Qualquer Raça</option>
+                                    <option value="">Sem Raça Definida</option>
+                                    <option value="">Qualquer Raça</option>
+                                    <optgroup label="Raças Cão" class="hide">
+                                        <option value="Airedale Terrier">Airedale Terrier</option>
+                                        <option value="Akita Inu">Akita Inu</option>
+                                        <option value="Beagle">Beagle</option>
+                                    </optgroup>
+                                    <optgroup label="Raças Gato" class="hide">
+                                        <option value="Abissínio">Abissínio</option>~
+                                        <option value="Angorá Turco">Angorá Turco</option>
+                                        <option value="Azul Russo">Azul Russo</option>
+                                        <option value="Bengal">Bengal</option>
+                                        <option value="Birmanês">Birmanês</option>
+                                        <option value="Britânico de Pêlo Curto">Britânico de Pêlo Curto</option>
+                                        <option value="Bosques da Noruega">Bosques da Noruega</option>
+                                        <option value="Chartreux">Chartreux</option>
+                                        <option value="Maine Coon">Maine Coon</option>
+                                        <option value="Persa">Persa</option>
+                                        <option value="Ragdoll">Ragdoll</option>
+                                        <option value="Sagrado da Birmânia">Sagrado da Birmânia</option>
+                                        <option value="Scottish Fold">Scottish Fold</option>
+                                        <option value="Siamês">Siamês</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div> 
+                                <select id="size" class="hide">
+                                    <option vlaue="0">Qualquer Porte</option>
+                                    <option value="1">Mini</option>
+                                    <option value="2">Pequeno</option>
+                                    <option value="3">Médio</option>
+                                    <option value="4">Grande</option>
+                                    <option value="5">Muito Grande</option>
+                                </select>
+                            </div> -->
+                            <!-- <div id="otherAnimal" class="hide">
+                                <div>
+                                    <input type="text" name="otherAnimal" placeholder="Espécie">
+                                </div>
+                                <div>
+                                    <button type="button">Procurar</button>
+                                </div>
+                            </div> -->
+                            <div>
+                                <label>Cor Predominante</label>
+                                <div class="groupColor">
+                                    <div class="colorPicker" style="background:#000" title="Preto"></div>
+                                    <div class="colorPicker"  style="background: #FFF" title="Branco"></div>
+                                    <div class="colorPicker"  style="background: #663300" title="Castanho"></div>
+                                    <div class="colorPicker"  style="background: #969696" title="Cinzento"></div>
+                                    <div class="colorPicker"  style="background: #F08F00" title="Laranja"></div>
+                                    <div class="colorPicker"  style="background: #48D130" title="Verde"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- <div>
+                            <label>Outros Filtros</label>
+                            <div>
+                                <label>
+                                    Desde
+                                    <input type="date" name="since">
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Até
+                                    <input type="date" name="until">
+                                </label>
+                            </div>
+                            <div>
+                                <select class="status">
+                                    <option value="0">Activo</option>
+                                    <option value="1">Resolvido</option>
+                                    <option value="2">Expirado</option>
+                                    <option value="3">Cancelado</option>
+                                    <option value="4">Qualquer Estado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <div>
+                                    <input type="search" name="name" placeholder="Nome do Animal">
+                                </div>
+                                <div>
+                                    <button type="submit" name="buttons">Procurar</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </form>
+                    <p><a href="desaparecidos.html" class="clear-form">Remover Filtros</a></p>
+                </div>
+                <div class="pic-wrapper">
+                    <ul>
+                        <li class="selectorA" data-location="Lisboa" data-animal="Gato" data-gender="Fêmea" data-color="5">
+                            <div class="date">
+                                <span>9 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/cat5.jpg" alt="Gata laranja de Lisboa">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Lisboa</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Setúbal" data-animal="Cão" data-gender="Macho" data-color="3">
+                            <div class="date">
+                                <span>9 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/dog4.jpg" alt="Cão castanho de Setúbal">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Setúbal</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Setúbal" data-animal="Gato" data-gender="Macho" data-color="2">
+                            <div class="date">
+                                <span>8 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/cat4.jpg" alt="Gato branco de Setúbal">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Setúbal</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Setúbal" data-animal="Cão" data-gender="Macho" data-color="2">
+                            <div class="date">
+                                <span>8 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/dog1.jpg" alt="Cão branco de Setúbal">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Setúbal</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Porto" data-animal="Gato" data-gender="Macho" data-color="4">
+                            <div class="date">
+                                <span>8 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/cat7.jpg" alt="Gato cinzento de Porto">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Porto</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Setúbal" data-animal="Cão" data-gender="Macho" data-color="1">
+                            <div class="date">
+                                <span>7 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/dog2.jpg" alt="Cão preto de Setúbal">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Setúbal</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Setúbal" data-animal="Gato" data-gender="Fêmea" data-color="2">
+                            <div class="date">
+                                <span>6 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/cat3.jpg" alt="Gata braca de Setúbal">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Setúbal</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Porto" data-animal="Outro" data-gender="Fêmea" data-color="6">
+                            <div class="date">
+                                <span>6 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/outro4.jpg" alt="Outro animal de Porto">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Porto</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Porto" data-animal="Outro" data-gender="Macho" data-color="6">
+                            <div class="date">
+                                <span>5 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/outro1.jpg" alt="Outro animal de Porto">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Porto</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Porto" data-animal="Gato" data-gender="Fêmea" data-color="1">
+                            <div class="date">
+                                <span>5 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/cat6.jpg" alt="Gata preta de Porto">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Porto</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Lisboa" data-animal="Outro" data-gender="Fêmea" data-color="4">
+                            <div class="date">
+                                <span>4 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/outro2.jpg" alt="Outro animal de Lisboa">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Lisboa</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Setúbal" data-animal="Gato" data-gender="Fêmea" data-color="3">
+                            <div class="date">
+                                <span>4 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/cat8.jpg" alt="Gata castanha de Setúbal">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Setúbal</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Lisboa" data-animal="Outro" data-gender="Fêmea" data-color="4">
+                            <div class="date">
+                                <span>2 Maio 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/outro3.jpg" alt="Outro animal de Lisboa">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Lisboa</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Lisboa" data-animal="Cão" data-gender="Macho" data-color="3">
+                            <div class="date">
+                                <span>30 Abril 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/dog3.jpg" alt="Cão castanho de Lisboa">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Lisboa</span>
+                            </div>
+                        </li>
+                        <li class="selectorA" data-location="Porto" data-animal="Cão" data-gender="Macho" data-color="5">
+                            <div class="date">
+                                <span>29 Abril 2019</span>
+                            </div>
+                            <div>
+                                <a href="desaparecidos.html">
+                                    <img src="img/dog5.jpg" alt="Cão laranja de Porto">
+                                </a>
+                            </div>
+                            <div class="location">
+                                <span>Porto</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                    <ul>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="desaparecidos.html">Declaração de Privacidade</a></li>
+                        <li><a href="desaparecidos.html">Termos de Serviço</a></li>
+                    </ul>
+                    <p>©2019 Encontra-me® – Todos os Direitos Reservados</p>
+                    <div class="social">  
+                        <ul>
+                            <li><a href="desaparecidos.html"><img src="img/facebook-logo.svg" alt="facebook"></a></li>
+                            <li><a href="desaparecidos.html"><img src="img/instagram.svg" alt="instagram"></a></li>
+                            <li><a href="desaparecidos.html"><img src="img/twitter-logo.svg" alt="twitter"></a></li>
+                        </ul>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

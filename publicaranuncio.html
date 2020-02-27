@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Publicar Anúncio - Animal Desaparecido</title>
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <link rel="stylesheet" type="text/css" href="css/modal.css">
+        <link rel="stylesheet" type="text/css" href="css/publicaranunciodes.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="scripts/index.js"></script>
+        <script src="scripts/modal.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="menu-wrapper">
+                <div class="phoneMenuContainer">
+                    <div class="logo"> 
+                        <a href="index.html">
+                            <img src="img/logo2.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="phoneBar">
+                        <div class="phoneLogin">
+                            <img src="img/user.svg" alt="conta">
+                        </div>
+                        <div class="phoneMenu">
+                            <img src="img/menu.svg" alt="menu">
+                        </div>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="publicaranuncio.html">Publicar Anúncio</a></li>
+                        <li><a href="desaparecidos.html">Desaparecidos</a></li>
+                        <li><a href="publicaranuncio.html">Encontrados</a></li>
+                        <li>
+                            <a href="sobre.html">Sobre</a>
+                            <ul>
+                                <li><a href="publicaranuncio.html">Contato</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="publicaranuncio.html">Blog</a>
+                            <ul>
+                                <li><a href="publicaranuncio.html">Noticias</a></li>
+                                <li><a href="publicaranuncio.html">Eventos</a></li>
+                                <li><a href="publicaranuncio.html">Recomendações</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="login">
+                    <ul>
+                        <li class="logIn">Iniciar Sessão</li>
+                        <li class="createAccount">Criar Conta</li>
+                    </ul>
+                </div>
+                <div class="modal-login">
+                    <form id="Form" method="get" action="publicaranuncio.html">
+                        <div>
+                            <label>
+                                Nome de Utilizador
+                                <input type="text" name="username" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Senha
+                                <input type="password" name="password" required>
+                            </label>
+                        </div>
+                        <div class="button-container">
+                            <button type="button"  class="loginButton">Iniciar Sessão</button>
+                            <button type="button"  class="cancelButtonL">Cancelar</button>
+                        </div>
+                        <div class="span-container">
+                            <span>Ainda não tem conta? <span class="new-account">Criar uma conta de utilizador.</span></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-new-account">
+                    <form id="Form-new-account" method="get" action="publicaranuncio.html">
+                        <div>
+                            <label>
+                                Nome
+                                <input type="text" name="name" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                E-mail
+                                <input type="email" name="email" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Criar uma Senha
+                                <input type="password" name="password" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Confirme sua Senha
+                                <input type="password" name="passwordc" required> 
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Data de Nascimento
+                                <input type="date" name="date">
+                            </label>
+                        </div>
+                        <div class="button-container">
+                            <button type="button"  class="createButton">Criar Conta</button>
+                            <button type="button"  class="cancelButtonN">Cancelar</button>
+                        </div>
+                        <div class="span-container">
+                            <span>Já está inscrito? <span class="log-in">Clique aqui para iniciar sessão.</span></span>
+                        </div>
+                    </form>
+                </div>
+            </header>
+            <main class="main-container-publicar-anuncio">
+                <h1>Publicar Anúncio</h1>
+                <div class="question-container">
+                    <h2>Que tipo de anúncio pretende publicar?</h2>
+                    <p>O meu animal desapareceu</p>
+                    <div> Quantos?
+                        <a href="publicaranunciodes.html">1</a>
+                        <a href="publicaranunciodes.html">2</a>
+                        <a href="publicaranunciodes.html">3</a>
+                        <a href="publicaranunciodes.html">4</a>
+                        <a href="publicaranunciodes.html">5</a>
+                    </div>
+                    <p>Encontrei um animal</p>
+                    <div>Quantos?
+                        <a href="publicaranuncioenc.html">1</a>
+                        <a href="publicaranuncioenc.html">2</a>
+                        <a href="publicaranuncioenc.html">3</a>
+                        <a href="publicaranuncioenc.html">4</a>
+                        <a href="publicaranuncioenc.html">5</a>
+                    </div>
+                </div>
+
+            </main>
+            <footer>
+                    <div class="footer">
+                        <ul>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="publicaranuncio.html">Declaração de Privacidade</a></li>
+                            <li><a href="publicaranuncio.html">Termos de Serviço</a></li>
+                        </ul>
+                        <p>©2019 Encontra-me® – Todos os Direitos Reservados</p>
+                        <div class="social">  
+                            <ul>
+                                <li><a href="publicaranuncio.html"><img src="img/facebook-logo.svg" alt="facebook"></a></li>
+                                <li><a href="publicaranuncio.html"><img src="img/instagram.svg" alt="instagram"></a></li>
+                                <li><a href="publicaranuncio.html"><img src="img/twitter-logo.svg" alt="twitter"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </body>
+    </html>    

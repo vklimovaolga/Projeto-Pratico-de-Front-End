@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  --new-- */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+}
+
+#menu-wrapper {
+    background-image: none;
+    background-color: #1f1a30;
+    height: 15vh;
+}
+
+.main-container-publicar-anuncio {
+    margin: 40px auto;
+    width: 80vw;
+    height: 50vh;
+    margin-bottom: 100px;
+}
+
+.main-container {
+    margin: 40px auto;
+    width: 80vw;
+    margin-bottom: 100px;
+}
+
+.main-container h1, .main-container-publicar-anuncio h1 {
+    font-size: 2rem;
+    margin: 20px 20px 30px 0;
+}
+
+.main-container h2, .main-container-publicar-anuncio h2 {
+    font-size: 1.6rem;
+    text-transform: none;
+    text-align: left;
+    margin: 25px;
+}
+
+/*  publicar anuncio  */
+
+.question-container p {
+    width: 250px;
+    margin: 20px;
+    padding-left: 30px;
+    padding: 20px;
+    background-color: #fde5d2;
+}
+
+.question-container div {
+    margin: 30px;
+    padding-left: 10px;
+}
+
+.question-container a {
+    background-color: #65549b;
+    padding: 5px 10px 5px 10px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+/* publicar anuncio de animal desaparecido */
+
+
+.required-info {
+    text-align: right; 
+    margin: 5px;
+}
+
+.data-local, .animal-photo, .animal-features, .coments, .contacts {
+    margin: 5px;
+}
+
+.data-local-sub, .animal-photo-sub, .animal-features-sub, .coments-sub, .contacts-sub{
+    margin-left: 10px;
+}
+
+.data-local-sub input[type="date"], input[type="time"], input[type="text"], input[type="number"], select {
+    width: 250px;
+    margin: 15px auto; 
+    padding: 10px;  
+    border: 1px solid #ccc;
+    border-radius: 5px 5px;
+}
+
+.alert-text {
+    padding: 15px;
+    background-color: #fde5d2;
+    width: 60vw;
+    margin-bottom: 15px;
+}
+.animal-photo-sub input[type="file"] {
+    width: 400px;
+    margin: 15px auto; 
+    padding: 10px;
+}
+
+.checkbox-container {
+    margin: 15px;
+}
+
+.breed-container, .gender-container  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 69px;
+}
+
+.breed-container > label , .gender-container > label {
+    margin-right: 5px;
+}
+
+.gender-container-sub  {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-container-sub, .microchip-container {
+    display: flex;
+    flex-direction: row;
+    height: 69px;
+    align-items: center;
+}
+
+.groupColor{
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+.colorPicker {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    border-radius: 5px 10px 5px;
+} 
+
+.colorPicker:hover {
+    border: 1px solid #4219c7;
+}
+
+.microchip-container-sub {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.mcnumber-container, .description-container, .coments-container, .more-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mcnumber-info, .description-info, .coments-info {
+    font-size: 1.3rem;
+    color: rgba(128, 128, 128, 0.945);
+    margin: 15px 0 15px 0px;
+}
+
+textarea {
+    width: 300px;
+    height: 90px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.buttons-container {
+    margin: 40px 0 0 50px;
+}
+
+.save-button {
+    background-color: #1f1a30;
+    border: none;
+    border-radius: 5px 5px;
+    padding: 15px;
+    color: #FFF;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+.save-button:hover {
+    background-color: #675b8db9;
+}
+
+.cancel-button {
+    background-color: rgb(129, 46, 46);
+    border: none;
+    border-radius: 5px 5px;
+    padding: 15px;
+    color: #FFF;
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+.cancel-button:hover {
+    background-color: rgba(129, 46, 46, 0.637);
+}
+
+@media(min-width: 768px){
+    .main-container-publicar-anuncio {
+        margin: 40px auto;
+        width: 80vw;
+        height: 50vh;
+        margin-bottom: 100px;
+    }
+
+    .main-container h1, .main-container-publicar-anuncio h1 {
+        font-size: 3rem;
+        margin: 20px 20px 30px 0;
+    }
+
+    .question-container p {
+        width: 400px;
+        margin: 20px;
+        padding-left: 30px;
+        padding: 20px;
+        background-color: #fde5d2;
+    }
+    
+    .question-container div {
+        margin: 30px;
+        padding-left: 15px;
+    }
+    
+    .question-container a {
+        background-color: #65549b;
+        padding: 10px 20px 10px 20px;
+        color: #FFF;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    /*  new ----- */
+
+    .data-local, .animal-photo, .animal-features, .coments, .contacts {
+        margin: 15px;
+    }
+    
+    .data-local-sub, .animal-photo-sub, .animal-features-sub, .coments-sub, .contacts-sub {
+        margin-left: 50px;
+    }
+
+}
+
+@media(min-width: 1366px){
+    #menu-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .main-container {
+        width: 60vw;
+    }
+
+    .main-container-publicar-anuncio {
+        width: 70vw;
+    }
+
+    .mcnumber-container, .description-container, .coments-container, .more-info {
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+        align-items: center;
+    }
+    
+    .mcnumber-container-sub, .description-container-sub, .coments-container-sub, .more-info-sub{
+        margin-left: 15px;
+    }
+
+    .mcnumber-info, .description-info, .coments-info {
+        width: 500px;
+        font-size: 1.3rem;
+        color: rgba(128, 128, 128, 0.945);
+    }
+    .coments-container > label, .more-info > label {
+        width: 150px;
+    }
+
+    .alert-text {
+        width: 40vw;
+    }
+
+}   
+
