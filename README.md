@@ -1,4 +1,4 @@
-# projeto1
+# Projeto Pratico de Front-End
 
 Projeto do primeiro modulo de Full-Stack Web Developer.
 
